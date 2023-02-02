@@ -15,7 +15,8 @@ class App extends Component {
     return (
       <div className="container">
         <Welcome greeting="Hello" name="User" />
-        {isLoggedIn ? <button>Logout</button> : <button>Login</button>}
+        {isLoggedIn && <button>Logout</button>}
+        {!isLoggedIn && <button>Login</button>}
       </div>
     )
   }
